@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;SGBD/src/main/java/be/ipam/sgbd/Repository/AuthorDAO&apos; to &apos;AuthorDAO.java&apos;" description="Rename resource &apos;AuthorDAO&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/java/be/ipam/sgbd/Repository/AuthorDAO" name="AuthorDAO.java" stamp="1574711569124" updateReferences="true"/>
+</session>

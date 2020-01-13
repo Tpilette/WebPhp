@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="ReaderControllerTest" project="SGBD" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="be.ipam.sgbd.ReaderControllerTest" incomplete="true" displayname="ReaderControllerTest" uniqueid="[engine:junit-jupiter]/[class:be.ipam.sgbd.ReaderControllerTest]">
+    <testcase name="testBorrow" classname="be.ipam.sgbd.ReaderControllerTest" incomplete="true" displayname="testBorrow()" uniqueid="[engine:junit-jupiter]/[class:be.ipam.sgbd.ReaderControllerTest]/[method:testBorrow()]"/>
+  </testsuite>
+</testrun>

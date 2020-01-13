@@ -1,0 +1,23 @@
+package be.ipam.sgbd.Model;
+
+import javax.persistence.*;
+
+@Entity
+@Inheritance(strategy=InheritanceType.JOINED)
+public class Reader extends Person {
+	
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="Readerid")
+	private long ReaderId;
+
+	public long getReaderId() {
+		return ReaderId;
+	}
+
+	public void setReaderId(long readerId) {
+		ReaderId = readerId;
+	}
+	
+}

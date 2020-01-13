@@ -1,0 +1,34 @@
+package be.ipam.sgbd;
+
+
+import java.util.*;
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import static org.junit.jupiter.api.Assertions.*;
+
+import be.ipam.sgbd.Controller.*;
+import be.ipam.sgbd.Model.*;
+
+@SpringBootTest
+public class ReaderControllerTest {
+
+	@Autowired
+	ReaderController rc;
+	@Autowired
+	BookController bc;
+	
+
+	@Test
+	public void testBorrow() {
+		
+		Date startDate = new Date();
+		Iterable<Reader> r  = rc.getReaders();
+		Reader read = r.iterator().next();
+		Book book = bc.getBooks().iterator().next();
+		Borrowing b = rc.BorrowBook(startDate, book, read);
+		
+		assertNotNull(b);
+	}
+
+}

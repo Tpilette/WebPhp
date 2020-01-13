@@ -1,0 +1,67 @@
+package be.ipam.sgbd.Model;
+
+import javax.persistence.*;
+
+@Entity
+public class Copy {
+
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="CopyId")
+	private long CopyId;
+
+	@Column(name="copystateId")
+	private CopyState State;
+
+	@Column(name="copystatusId")
+	private CopyStatus Status;
+
+	@Column(name="EditionISBN")
+	private Edition Edition;
+	
+	@ManyToOne
+	@JoinTable(name = "Bibliotheque", joinColumns = { @JoinColumn(name = "BibliothequeId") })
+	private Bibliotheque Bibliotheque;
+
+	public long getCopyId() {
+		return CopyId;
+	}
+	public void setCopyId(long copyId) {
+		CopyId = copyId;
+	}
+
+	public long getCopyState() {
+		return CopyState;
+	}
+
+	public void setCopyState(long copyState) {
+		CopyState = copyState;
+	}
+
+	public long getCopyStatus() {
+		return CopyStatus;
+	}
+
+	public void setCopyStatus(long copyStatus) {
+		CopyStatus = copyStatus;
+	}
+
+	public Edition getEdition() {
+		return Edition;
+	}
+
+	public void setEdition(Edition edition) {
+		Edition = edition;
+	}
+
+	public Bibliotheque getBibliotheque() {
+		return Bibliotheque;
+	}
+
+	public void setBibliotheque(Bibliotheque bibliotheque) {
+		Bibliotheque = bibliotheque;
+	}
+
+
+}
